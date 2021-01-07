@@ -4,7 +4,7 @@
 #include <vector>
 
 const std::string &SALT1 = "!8!=)/z_#";
-const std::string &SALT2 = "ï¿½+32w_:;:.";
+const std::string &SALT2 = "¿+32w_:;:.";
 const std::string &SALT3 = "6x!!jo../_8aaa";
 const std::string &SALT4 = "d5-4+xsuois";
 const std::string &BASE64_CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
